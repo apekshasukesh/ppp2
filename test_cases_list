@@ -1,0 +1,174 @@
+#===================================================================================#
+
+        for t in fnameFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log'))     
+        shutil.move(file_names[0], newpath[0])
+        shutil.move(file_names[0]+'.log', newpath[0])
+
+#===================================================================================#
+
+        for t in outFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log'))     
+        shutil.move(file_names[0], newpath[1])
+        shutil.move(file_names[0]+'.log', newpath[1])
+
+#==================================================================================#
+
+        for t in resFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[4]))
+            self.assertTrue(os.path.isfile(file_names[4]+'.log')) 
+        shutil.move(file_names[4], newpath[2])
+        shutil.move(file_names[4]+'.log', newpath[2])
+
+#==================================================================================#
+
+        for t in remSitesFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log'))
+        shutil.move(file_names[0], newpath[3])
+        shutil.move(file_names[0]+'.log', newpath[3])
+  
+        for t in keptSitesFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[1]))
+            self.assertTrue(os.path.isfile(file_names[1]+'.log'))
+        shutil.move(file_names[1], newpath[4])
+        shutil.move(file_names[1]+'.log', newpath[4])
+
+        for t in vcfFilter:
+            vcf_filter.run(t)  
+            self.assertTrue(os.path.isfile(file_names[2]))
+            self.assertTrue(os.path.isfile(file_names[2]+'.log'))
+        shutil.move(file_names[2], newpath[5])
+        shutil.move(file_names[2]+'.log', newpath[5])
+
+        for t in bcfFilter:
+            vcf_filter.run(t)  
+            self.assertTrue(os.path.isfile(file_names[3]))
+            self.assertTrue(os.path.isfile(file_names[3]+'.log'))
+        shutil.move(file_names[3], newpath[6])
+        shutil.move(file_names[3]+'.log', newpath[6])
+
+
+#================================================================================#
+
+        for t in minAlleleFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log')) 
+        shutil.move(file_names[0], newpath[7])
+        shutil.move(file_names[0]+'.log', newpath[7])
+
+#==============================================================================#
+
+        for t in maxAlleleFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log')) 
+        shutil.move(file_names[0], newpath[8])
+        shutil.move(file_names[0]+'.log', newpath[8])
+
+#==============================================================================#
+     
+        for t in outRemSitesFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log'))
+        shutil.move(file_names[0], newpath[9])
+        shutil.move(file_names[0]+'.log', newpath[9])
+  
+        for t in outKeptSitesFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[1]))
+            self.assertTrue(os.path.isfile(file_names[1]+'.log'))
+        shutil.move(file_names[1], newpath[10])
+        shutil.move(file_names[1]+'.log', newpath[10])
+
+        for t in outVcfFilter:
+            vcf_filter.run(t)  
+            self.assertTrue(os.path.isfile(file_names[2]))
+            self.assertTrue(os.path.isfile(file_names[2]+'.log'))
+        shutil.move(file_names[2], newpath[11])
+        shutil.move(file_names[2]+'.log', newpath[11])
+
+        for t in outBcfFilter:
+            vcf_filter.run(t)  
+            self.assertTrue(os.path.isfile(file_names[3]))
+            self.assertTrue(os.path.isfile(file_names[3]+'.log'))
+        shutil.move(file_names[3], newpath[12])
+        shutil.move(file_names[3]+'.log', newpath[12])
+
+#===============================================================================#
+
+        for t in outMinAlleleFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log')) 
+        shutil.move(file_names[0], newpath[13])
+        shutil.move(file_names[0]+'.log', newpath[13])
+
+#==============================================================================#
+
+        for t in outMaxAlleleFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[0]))
+            self.assertTrue(os.path.isfile(file_names[0]+'.log')) 
+        shutil.move(file_names[0], newpath[14])
+        shutil.move(file_names[0]+'.log', newpath[14])
+
+#=============================================================================#
+
+        for t in resRemSitesFilter:
+            vcf_filter.run(t)       
+            self.assertTrue(os.path.isfile(file_names[4]))
+            self.assertTrue(os.path.isfile(file_names[4]+'.log'))
+        shutil.move(file_names[4], newpath[15])
+        shutil.move(file_names[4]+'.log', newpath[15])
+
+        for t in resKeptSitesFilter:
+            vcf_filter.run(t)  
+            self.assertTrue(os.path.isfile(file_names[5]))
+            self.assertTrue(os.path.isfile(file_names[5]+'.log'))
+        shutil.move(file_names[5], newpath[16])
+        shutil.move(file_names[5]+'.log', newpath[16])
+
+        for t in resVcfFilter:
+            vcf_filter.run(t)  
+            self.assertTrue(os.path.isfile(file_names[6]))
+            self.assertTrue(os.path.isfile(file_names[6]+'.log'))
+        shutil.move(file_names[6], newpath[17])
+        shutil.move(file_names[6]+'.log', newpath[17])
+
+        for t in resBcfFilter:
+            vcf_filter.run(t)  
+            self.assertTrue(os.path.isfile(file_names[7]))
+            self.assertTrue(os.path.isfile(file_names[7]+'.log'))
+        shutil.move(file_names[7], newpath[18])
+        shutil.move(file_names[7]+'.log', newpath[18])
+
+#===============================================================================#
+
+        for t in resMinAlleleFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[4]))
+            self.assertTrue(os.path.isfile(file_names[4]+'.log')) 
+        shutil.move(file_names[4], newpath[19])
+        shutil.move(file_names[4]+'.log', newpath[19])
+
+#==============================================================================#
+
+        for t in resMaxAlleleFilter:
+            vcf_filter.run(t)
+            self.assertTrue(os.path.isfile(file_names[4]))
+            self.assertTrue(os.path.isfile(file_names[4]+'.log')) 
+        shutil.move(file_names[4], newpath[20])
+        shutil.move(file_names[4]+'.log', newpath[20])
+
+
+        
